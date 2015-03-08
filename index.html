@@ -1,47 +1,246 @@
-<!DOCTYPE html>
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
 <html>
+<head>		
+<title>社区首页beta版测试</title>
+<link href="./css/bootstrap.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="./js/jquery.min.js"></script>
+<!-- Custom Theme files -->
+<link href="./css/style.css" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+</script>
+<script type="text/javascript" src="./js/jquery-1.10.2.min.js"></script>  	
+<!---- start-smoth-scrolling---->
+<script type="text/javascript" src="./js/move-top.js"></script>
+<script type="text/javascript" src="./js/easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+<!---- start-smoth-scrolling---->
+<!----- webfonts ------>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,600,800' rel='stylesheet' type='text/css'>
+<!----- webfonts ------>
+<!----start-top-nav-script---->
+		<script>
+			$(function() {
+				var pull 		= $('#pull');
+					menu 		= $('nav ul');
+					menuHeight	= menu.height();
+				$(pull).on('click', function(e) {
+					e.preventDefault();
+					menu.slideToggle();
+				});
+				$(window).resize(function(){
+	        		var w = $(window).width();
+	        		if(w > 320 && menu.is(':hidden')) {
+	        			menu.removeAttr('style');
+	        		}
+	    		});
+			});
+		</script>
+<!----//End-top-nav-script---->
+</head>
+<body>
+	<!----- start-header---->
+			<div id="home" class="header">
+					<div class="top-header">
+						<div class="container">
+							<!-- <div class="logo">
+								<a href="#"><img src="./images/logo.png" alt=""></a>  
+							</div> -->
+							<!----start-top-nav---->
+							 <nav class="top-nav">
+								<ul class="top-nav">
+									<li class="active"><a href="#home" class="scroll">主页 </a></li>
+									<li><a href="#services" class="scroll">服务</a></li>
+									<li><a href="#portfolio" class="scroll">热门</a></li>
+									<li><a href="#hire" class="scroll">反馈</a></li>
+								</ul>
+								<a href="#" id="pull"><img src="./images/menu-icon.png" title="menu" /></a>
+							</nav>
+							<div class="clearfix"> </div>
+						</div>
+						<div class="tittle-head">
+				        		<h1>欢迎来到社区</h1>
+				          		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, id?</p>
+				          		<div class="learn-button">
+				          			<a class="slide-btn" href="#">登入</a>
+				          		</div>
+				          		<div class="learn-button">
+				          			<a class="slide-btn" href="#">注册</a>
+				          		</div>
+				          		<div class="clear"> </div>
+				          	</div>
+				</div>
+			</div>
+		<!----- //End-header---->
+		<!----- /start-services---->
+			 <div id="services" class="Services">
+	 			<div class="container">
+		 			<div class="service-grides">
+			 			<div class="col-md-4 service-grid">
+			 				<!-- <div class="col-md-3 service-img">
+			 					<img src="./images/s-1.png" alt="">
+			 				</div> -->
+			 				<div class="col-md-9 service-text ">
+			 					<h3>特点之一</h3>
+			 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid blanditiis, aperiam vitae ab! Impedit officiis at corrupti. Quasi, laboriosam? Necessitatibus reprehenderit error temporibus illo vel voluptas ipsam dolor, quasi iure!</p>
+			 					<a href="#">更多</a>
+			 				</div>
+			 					<div class="clearfix"> </div>
+			 			</div>
+		 				<div class="col-md-4 service-grid">
+			 				<!-- <div class="col-md-3 service-img">
+			 					<img src="./images/s-2.png" alt="">
+			 				</div> -->
+			 				<div class="col-md-9 service-text ">
+			 					<h3>特点之二</h3>
+			 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae voluptates quas sapiente distinctio deserunt corrupti dolores eaque modi quaerat incidunt itaque nobis, molestiae architecto sed odit eligendi quos, veniam porro.</p>
+			 					<a href="#">更多</a>
+			 				</div>
+			 					<div class="clearfix"> </div>
+			 			</div>
+			 			<div class="col-md-4 service-grid">
+			 				<div class="col-md-3 service-img">
+			 					<img src="./images/s-3.png" alt="">
+			 				</div>
+			 				<div class="col-md-9 service-text ">
+			 					<h3>特点之三</h3>
+			 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem laborum laudantium similique corporis in veritatis praesentium dolorem, ab quas. Illo facilis molestiae ratione fugit similique, suscipit, harum laborum temporibus sequi. </p>
+			 					<a href="#">更多</a>
+			 				</div>
+			 					<div class="clearfix"> </div>
+			 			</div>
+		 				<div class="clear"> </div>
+		 			</div>
+	 			</div>
+			 </div>
+		 <div id="portfolio" class="main_bg">
+    	  <div class="portfolio">
+          		<div class="row">
+            		<div id="slider1" class="grid-slider">
+					<ul class="gs-list" data-title="">            	                  	
+                     <li onclick="location.href='index.html';" data-src="./images/final/top-1.png">
+                            <a href="./images/slider4.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet.</div>
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/meddile.png" data-colspan="2" data-rowspan="2" >
+                            <a href="./images/slider2.jpg" ><img src="./images/spacer.png" alt=""/></a>
+                        </li>                              
+                        <li onclick="location.href='index.html';" data-src="./images/final/top-3.png">
+                            <a href="./images/grid-pic1.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>                          
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/top-2.png">
+                            <a href="./images/grid-pic1.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>                           
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/top-4.png">
+                            <a href="./images/slider3.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet.</div>
+                        </li>
+                      	<li onclick="location.href='index.html';" data-src="./images/final/meddile.png" data-colspan="2" data-rowspan="2">
+                        	<a href="./images/slider1.jpg"><img src="./images/spacer.png" alt=""/></a>
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/bottom.png" data-rowspan="2">
+                            <a href="./images/slider3.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/top-3.png">
+                            <a href="./images/slider1.jpg"><img src="./images/spacer.png" alt=""/></a>
+							<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        </li>
+    					<li onclick="location.href='index.html';" data-src="./images/final/top-4.png">
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+                        </li>
+                      	 <li onclick="location.href='index.html';" data-src="./images/final/top-1.png">
+                            <a href="./images/slider4.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet.</div>
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/meddile.png" data-colspan="2" data-rowspan="2" >
+                            <a href="./images/slider2.jpg" ><img src="./images/spacer.png" alt=""/></a>
+                        </li>                              
+                        <li onclick="location.href='index.html';" data-src="./images/final/top-3.png">
+                            <a href="./images/grid-pic1.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>                          
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/top-2.png">
+                            <a href="./images/grid-pic1.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>                           
+                        </li>
+                        <li onclick="location.href='index.html';" data-src="./images/final/top-4.png">
+                            <a href="./images/slider3.jpg"><img src="./images/spacer.png" alt=""/></a>
+                            <div>Lorem ipsum dolor sit amet.</div>
+                        </li>
+                    </ul>
+                    
+				</div>
+      	</div>
+	</div>
+    	<div class="clear"></div>
+    </div> 
+	    <!---start-script-gallery--->
+   		  <link rel="stylesheet" href="./css/grid-slider.css" type="text/css" media="screen" />
+	    <script type="text/javascript" src="./js/jquery.grid-slider.min.js"></script>
+	    <script type="text/javascript" src="./js/jquery.wt-lightbox.min.js"></script>    
+	    <script type="text/javascript" src="./js/demo.js"></script>
+	<!---//End-script-gallery--->
+	<!------------/start-hear-me---------->
+		   	<div id="hire" class="contact">
+		   		<div class="container">
+		   			<div class="contact-head">
+		   				<h3>意见 <span>反馈</span></h3>
+		   				<p>若有更好的想法，敬请联系</p>
+		   				<div class="social-icons">
+										<ul class="t-social unstyled-list list-inline">
+														<li><a class="email" href="#"><span> </span></a></li>
+														<li><a class="fb" href="#"><span> </span></a></li>
+														<li><a class="twit" href="#"><span> </span></a></li>
+														<li><a class="dbl" href="#"><span> </span></a></li>
+														<div class="clearfix"> </div>
+										</ul>
+									</div>
+							</div>
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Shihou.GitHub.io : ShiHou&#39;s Blog">
-
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Shihou.GitHub.io</title>
-  </head>
-
-  <body>
-
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/ShiHou">View on GitHub</a>
-
-          <h1 id="project_title">Shihou.GitHub.io</h1>
-          <h2 id="project_tagline">ShiHou&#39;s Blog</h2>
-
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="shihougithubio" class="anchor" href="#shihougithubio" aria-hidden="true"><span class="octicon octicon-link"></span></a>shihou.github.io</h1>
-<p>ShiHou's Blog</p>
-<p>I wanna learn more about html and css.</p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+		   			
+		   			</div>
+		   			
+		   		</div>
+		   		<div class="footer">
+		   			<div class="container">
+			   			<div class="copy-right">
+			   					<p>子宣大大崇拜者小分队版权所有</p>
+						</div>
+					</div>
+		   		</div>
+				<script type="text/javascript">
+									$(document).ready(function() {
+										/*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear' 
+								 		};
+										*/
+										
+										$().UItoTop({ easingType: 'easeOutQuart' });
+										
+									});
+								</script>
+					<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+</body>
 </html>
